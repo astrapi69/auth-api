@@ -2,8 +2,8 @@
 
 <div align="center">
 
-[![Build Status](https://travis-ci.org/astrapi69/auth-api.svg?branch=develop)](https://travis-ci.org/astrapi69/auth-api) 
-[![Open Issues](https://img.shields.io/github/issues/astrapi69/auth-api.svg?style=flat)](https://github.com/astrapi69/auth-api/issues) 
+[![Build Status](https://travis-ci.org/astrapi69/auth-api.svg?branch=develop)](https://travis-ci.org/astrapi69/auth-api)
+[![Open Issues](https://img.shields.io/github/issues/astrapi69/auth-api.svg?style=flat)](https://github.com/astrapi69/auth-api/issues)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth-api/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.alpharogroup/auth-api)
 [![Javadocs](http://www.javadoc.io/badge/de.alpharogroup/auth-api.svg)](http://www.javadoc.io/doc/de.alpharogroup/auth-api)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://opensource.org/licenses/MIT)
@@ -49,23 +49,23 @@ Add the following maven dependency to your project `pom.xml` if you want to impo
 
 Than you can add the dependency to your dependencies:
 
-	<properties>
-			...
-		<!-- AUTH-API version -->
-		<auth-api.version>5.3</auth-api.version>
-			...
-	</properties>
-			...
-		<dependencies>
-			...
-			<!-- AUTH-API DEPENDENCY -->
-			<dependency>
-				<groupId>de.alpharogroup</groupId>
-				<artifactId>auth-api</artifactId>
-				<version>${auth-api.version}</version>
-			</dependency>
-			...
-		</dependencies>
+    <properties>
+            ...
+        <!-- AUTH-API version -->
+        <auth-api.version>5.3</auth-api.version>
+            ...
+    </properties>
+            ...
+        <dependencies>
+            ...
+            <!-- AUTH-API DEPENDENCY -->
+            <dependency>
+                <groupId>de.alpharogroup</groupId>
+                <artifactId>auth-api</artifactId>
+                <version>${auth-api.version}</version>
+            </dependency>
+            ...
+        </dependencies>
 
 ## Semantic Versioning
 
