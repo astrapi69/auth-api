@@ -58,11 +58,27 @@ public interface Session<K, V> extends Serializable
 	Map<K, V> getAttributtes();
 
 	/**
+	 * Sets the field <code>attributtes</code>.
+	 *
+	 * @param attributtes
+	 *            The <code>attributtes</code> to set
+	 */
+	void setAttributtes(final Map<K, V> attributtes);
+
+	/**
 	 * Returns the field <code>id</code>.
 	 *
 	 * @return The field <code>id</code>.
 	 */
 	String getId();
+
+	/**
+	 * Sets the field <code>id</code>.
+	 *
+	 * @param id
+	 *            The <code>id</code> to set
+	 */
+	void setId(final String id);
 
 	/**
 	 * Returns the field <code>lastAccess</code>.
@@ -72,11 +88,27 @@ public interface Session<K, V> extends Serializable
 	Date getLastAccess();
 
 	/**
+	 * Sets the field <code>lastAccess</code>.
+	 *
+	 * @param lastAccess
+	 *            The <code>lastAccess</code> to set
+	 */
+	void setLastAccess(final Date lastAccess);
+
+	/**
 	 * Returns the field <code>locale</code>.
 	 *
 	 * @return The field <code>locale</code>.
 	 */
 	Locale getLocale();
+
+	/**
+	 * Sets the field <code>locale</code>.
+	 *
+	 * @param locale
+	 *            The <code>locale</code> to set
+	 */
+	void setLocale(final Locale locale);
 
 	/**
 	 * Returns the field <code>maxInactiveTime</code>.
@@ -86,6 +118,14 @@ public interface Session<K, V> extends Serializable
 	int getMaxInactiveTime();
 
 	/**
+	 * Sets the field <code>maxInactiveTime</code>.
+	 *
+	 * @param maxInactiveTime
+	 *            The <code>maxInactiveTime</code> to set
+	 */
+	void setMaxInactiveTime(final int maxInactiveTime);
+
+	/**
 	 * Returns the field <code>startTime</code>.
 	 *
 	 * @return The field <code>startTime</code>.
@@ -93,11 +133,27 @@ public interface Session<K, V> extends Serializable
 	Date getStartTime();
 
 	/**
+	 * Sets the field <code>startTime</code>.
+	 *
+	 * @param startTime
+	 *            The <code>startTime</code> to set
+	 */
+	void setStartTime(final Date startTime);
+
+	/**
 	 * Returns the field <code>user</code>.
 	 *
 	 * @return The field <code>user</code>.
 	 */
 	User<Permission, Role<Permission>> getUser();
+
+	/**
+	 * Sets the field <code>user</code>.
+	 *
+	 * @param user
+	 *            The <code>user</code> to set.
+	 */
+	void setUser(final User<Permission, Role<Permission>> user);
 
 	/**
 	 * Sets the attribute.
@@ -109,61 +165,5 @@ public interface Session<K, V> extends Serializable
 	 * @return the v
 	 */
 	V setAttribute(final K key, final V value);
-
-	/**
-	 * Sets the field <code>attributtes</code>.
-	 *
-	 * @param attributtes
-	 *            The <code>attributtes</code> to set
-	 */
-	void setAttributtes(final Map<K, V> attributtes);
-
-	/**
-	 * Sets the field <code>id</code>.
-	 *
-	 * @param id
-	 *            The <code>id</code> to set
-	 */
-	void setId(final String id);
-
-	/**
-	 * Sets the field <code>lastAccess</code>.
-	 *
-	 * @param lastAccess
-	 *            The <code>lastAccess</code> to set
-	 */
-	void setLastAccess(final Date lastAccess);
-
-	/**
-	 * Sets the field <code>locale</code>.
-	 *
-	 * @param locale
-	 *            The <code>locale</code> to set
-	 */
-	void setLocale(final Locale locale);
-
-	/**
-	 * Sets the field <code>maxInactiveTime</code>.
-	 *
-	 * @param maxInactiveTime
-	 *            The <code>maxInactiveTime</code> to set
-	 */
-	void setMaxInactiveTime(final int maxInactiveTime);
-
-	/**
-	 * Sets the field <code>startTime</code>.
-	 *
-	 * @param startTime
-	 *            The <code>startTime</code> to set
-	 */
-	void setStartTime(final Date startTime);
-
-	/**
-	 * Sets the field <code>user</code>.
-	 *
-	 * @param user
-	 *            The <code>user</code> to set.
-	 */
-	void setUser(final User<Permission, Role<Permission>> user);
 
 }

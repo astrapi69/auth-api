@@ -52,11 +52,27 @@ public interface User<P extends Permission, R extends Role<P>> extends Serializa
 	String getId();
 
 	/**
+	 * Sets the field <code>id</code>.
+	 *
+	 * @param id
+	 *            The <code>id</code> to set
+	 */
+	void setId(final String id);
+
+	/**
 	 * Returns the field <code>password</code>.
 	 *
 	 * @return The field <code>password</code>.
 	 */
 	String getPw();
+
+	/**
+	 * Sets the field <code>password</code>.
+	 *
+	 * @param password
+	 *            The <code>password</code> to set
+	 */
+	void setPw(final String password);
 
 	/**
 	 * Returns the field <code>roles</code>.
@@ -66,11 +82,27 @@ public interface User<P extends Permission, R extends Role<P>> extends Serializa
 	Set<R> getRoles();
 
 	/**
+	 * Sets the field <code>roles</code>.
+	 *
+	 * @param roles
+	 *            The <code>roles</code> to set
+	 */
+	void setRoles(final Set<R> roles);
+
+	/**
 	 * Returns the field <code>username</code>.
 	 *
 	 * @return The field <code>username</code>.
 	 */
 	String getUsername();
+
+	/**
+	 * Sets the field <code>username</code>.
+	 *
+	 * @param username
+	 *            The <code>username</code> to set
+	 */
+	void setUsername(final String username);
 
 	/**
 	 * Checks if this User is active.
@@ -104,43 +136,11 @@ public interface User<P extends Permission, R extends Role<P>> extends Serializa
 	void setActive(final Boolean active);
 
 	/**
-	 * Sets the field <code>id</code>.
-	 *
-	 * @param id
-	 *            The <code>id</code> to set
-	 */
-	void setId(final String id);
-
-	/**
 	 * Sets the field <code>lock</code>.
 	 *
 	 * @param locked
 	 *            The <code>lock</code> to set
 	 */
 	void setLocked(final Boolean locked);
-
-	/**
-	 * Sets the field <code>password</code>.
-	 *
-	 * @param password
-	 *            The <code>password</code> to set
-	 */
-	void setPw(final String password);
-
-	/**
-	 * Sets the field <code>roles</code>.
-	 *
-	 * @param roles
-	 *            The <code>roles</code> to set
-	 */
-	void setRoles(final Set<R> roles);
-
-	/**
-	 * Sets the field <code>username</code>.
-	 *
-	 * @param username
-	 *            The <code>username</code> to set
-	 */
-	void setUsername(final String username);
 
 }

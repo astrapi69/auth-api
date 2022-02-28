@@ -42,19 +42,19 @@ public interface SignInModel extends Serializable
 	String getEmail();
 
 	/**
-	 * Gets the password.
-	 *
-	 * @return the password
-	 */
-	String getPassword();
-
-	/**
 	 * Sets the email.
 	 *
 	 * @param email
 	 *            the new email
 	 */
 	void setEmail(final String email);
+
+	/**
+	 * Gets the password.
+	 *
+	 * @return the password
+	 */
+	String getPassword();
 
 	/**
 	 * Sets the password.
