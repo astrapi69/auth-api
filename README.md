@@ -38,13 +38,13 @@ your project `build.gradle` if you want to import the core functionality of auth
 define version in file gradle.properties
 
 ```
-authApiVersion=1
+authApiVersion=6
 ```
 
 or in build.gradle ext area
 
 ```
-    authApiVersion = "1"
+    authApiVersion = "6"
 ```
 
 then add the dependency to the dependencies area
@@ -66,7 +66,7 @@ Than you can add the dependency to your dependencies:
     <properties>
             ...
         <!-- AUTH-API version -->
-        <auth-api.version>5.3</auth-api.version>
+        <auth-api.version>6</auth-api.version>
             ...
     </properties>
             ...
