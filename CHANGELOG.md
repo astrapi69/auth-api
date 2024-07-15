@@ -4,7 +4,9 @@
 Version 6.1-SNAPSHOT
 -------------
 
+CHANGED:
 
+- replaced obsolete package.html with package-info.java files
 
 Version 6
 -------------
