@@ -6,6 +6,7 @@ Version 6.1-SNAPSHOT
 
 CHANGED:
 
+- update gradle to new version 8.9
 - replaced obsolete package.html with package-info.java files
 
 Version 6
