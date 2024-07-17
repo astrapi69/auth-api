@@ -1,11 +1,12 @@
 ## Change log
 ----------------------
 
-Version 6.1-SNAPSHOT
+Version 7-SNAPSHOT
 -------------
 
 CHANGED:
 
+- upgrade jdk to version 11
 - update gradle to new version 8.9
 - replaced obsolete package.html with package-info.java files
 

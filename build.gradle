@@ -40,9 +40,11 @@ List<String> gradleFiles = [
 // Apply the Gradle files
 applyGradleFiles(gradleFiles)
 
-
 java {
     sourceCompatibility = "$projectSourceCompatibility" as Object
+    toolchain {
+        languageVersion = JavaLanguageVersion.of("$projectSourceCompatibility")
+    }
 }
 
 tasks.named("test") {
