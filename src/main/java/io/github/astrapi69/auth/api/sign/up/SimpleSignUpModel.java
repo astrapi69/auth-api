@@ -18,54 +18,45 @@
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.auth.usermanagement;
+package io.github.astrapi69.auth.api.sign.up;
 
-import java.io.Serializable;
-
-import io.github.astrapi69.auth.enumtype.InsertUserState;
+import io.github.astrapi69.auth.api.sign.in.SignInModel;
 
 /**
- * The interface {@link UserExistenceService}.
+ * The interface {@link SimpleSignUpModel} extends the {@link SignInModel} and adds the repeat
+ * password of the member and the term of use flag.
  */
-public interface UserExistenceService extends Serializable
+public interface SimpleSignUpModel extends SignInModel
 {
 
 	/**
-	 * Checks if a user exists with the given email.
-	 * 
-	 * @param email
-	 *            the email
-	 * @return true, if successful
-	 */
-	boolean existsUserWithEmail(final String email);
-
-	/**
-	 * Checks if a user exists with the given email or user name.
+	 * Gets the repeat password.
 	 *
-	 * @param emailOrUsername
-	 *            the email or user name
-	 * @return true, if successful
+	 * @return the repeat password
 	 */
-	boolean existsUserWithEmailOrUsername(final String emailOrUsername);
+	String getRepeatPassword();
 
 	/**
-	 * Checks if a user exists with the given email or user name.
-	 * 
-	 * @param email
-	 *            the email
-	 * @param username
-	 *            the user name
-	 * @return the resulted {@link InsertUserState} object.
+	 * Sets the repeat password.
+	 *
+	 * @param repeatPassword
+	 *            the new repeat password
 	 */
-	InsertUserState existsUserWithEmailOrUsername(final String email, final String username);
+	void setRepeatPassword(final String repeatPassword);
 
 	/**
-	 * Checks if a user exists with the given user name.
-	 * 
-	 * @param username
-	 *            the user name
-	 * @return true, if successful
+	 * Checks if the term of use is accepted
+	 *
+	 * @return true if the term of use is accepted otherwise false
 	 */
-	boolean existsUserWithUsername(final String username);
+	boolean isTermOfUseAccepted();
+
+	/**
+	 * Sets the term of use accepted.
+	 *
+	 * @param termOfUseAccepted
+	 *            the new term of use accepted
+	 */
+	void setTermOfUseAccepted(final boolean termOfUseAccepted);
 
 }

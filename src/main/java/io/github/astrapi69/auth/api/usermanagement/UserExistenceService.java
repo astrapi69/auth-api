@@ -18,26 +18,54 @@
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.auth.sign.in;
+package io.github.astrapi69.auth.api.usermanagement;
+
+import java.io.Serializable;
+
+import io.github.astrapi69.auth.api.enumeration.InsertUserState;
 
 /**
- * The interface {@link UsernameSignInModel} extended with the user name.
+ * The interface {@link UserExistenceService}.
  */
-public interface UsernameSignInModel extends SignInModel
+public interface UserExistenceService extends Serializable
 {
 
 	/**
-	 * Gets the username.
-	 *
-	 * @return the username
+	 * Checks if a user exists with the given email.
+	 * 
+	 * @param email
+	 *            the email
+	 * @return true, if successful
 	 */
-	String getUsername();
+	boolean existsUserWithEmail(final String email);
 
 	/**
-	 * Sets the username.
+	 * Checks if a user exists with the given email or user name.
 	 *
-	 * @param username
-	 *            the new username
+	 * @param emailOrUsername
+	 *            the email or user name
+	 * @return true, if successful
 	 */
-	void setUsername(final String username);
+	boolean existsUserWithEmailOrUsername(final String emailOrUsername);
+
+	/**
+	 * Checks if a user exists with the given email or user name.
+	 * 
+	 * @param email
+	 *            the email
+	 * @param username
+	 *            the user name
+	 * @return the resulted {@link InsertUserState} object.
+	 */
+	InsertUserState existsUserWithEmailOrUsername(final String email, final String username);
+
+	/**
+	 * Checks if a user exists with the given user name.
+	 * 
+	 * @param username
+	 *            the user name
+	 * @return true, if successful
+	 */
+	boolean existsUserWithUsername(final String username);
+
 }

@@ -18,18 +18,26 @@
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.auth.enumtype;
+package io.github.astrapi69.auth.api.sign.in;
 
 /**
- * The enum {@link InsertUserState} keeps three states for checking if the user exist or not.
+ * The interface {@link UsernameSignInModel} extended with the user name.
  */
-public enum InsertUserState
+public interface UsernameSignInModel extends SignInModel
 {
 
-	/** The flag that indicates that the email exists. */
-	EMAIL_EXISTS,
-	/** The insert flag indicates that the user can be inserted into the database. */
-	INSERT,
-	/** The flag that indicates that the username exists. */
-	USERNAME_EXISTS;
+	/**
+	 * Gets the username.
+	 *
+	 * @return the username
+	 */
+	String getUsername();
+
+	/**
+	 * Sets the username.
+	 *
+	 * @param username
+	 *            the new username
+	 */
+	void setUsername(final String username);
 }

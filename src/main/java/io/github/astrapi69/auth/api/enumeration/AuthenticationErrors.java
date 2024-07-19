@@ -18,45 +18,22 @@
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.auth.sign.up;
-
-import io.github.astrapi69.auth.sign.in.SignInModel;
+package io.github.astrapi69.auth.api.enumeration;
 
 /**
- * The interface {@link SimpleSignUpModel} extends the {@link SignInModel} and adds the repeat
- * password of the member and the term of use flag.
+ * The Enum {@link AuthenticationErrors}.
  */
-public interface SimpleSignUpModel extends SignInModel
+public enum AuthenticationErrors
 {
 
 	/**
-	 * Gets the repeat password.
-	 *
-	 * @return the repeat password
+	 * This constant indicates that the given email or username does not exist.
 	 */
-	String getRepeatPassword();
+	EMAIL_OR_USERNAME_DOES_NOT_EXIST,
 
-	/**
-	 * Sets the repeat password.
-	 *
-	 * @param repeatPassword
-	 *            the new repeat password
-	 */
-	void setRepeatPassword(final String repeatPassword);
+	/** This constant indicates that the given password is invalid. */
+	PASSWORD_INVALID,
 
-	/**
-	 * Checks if the term of use is accepted
-	 *
-	 * @return true if the term of use is accepted otherwise false
-	 */
-	boolean isTermOfUseAccepted();
-
-	/**
-	 * Sets the term of use accepted.
-	 *
-	 * @param termOfUseAccepted
-	 *            the new term of use accepted
-	 */
-	void setTermOfUseAccepted(final boolean termOfUseAccepted);
-
-}
+	/** This constant indicates that the given user object is not registered. */
+	UNREGISTERED
+};

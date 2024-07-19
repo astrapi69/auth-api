@@ -20,4 +20,9 @@
  */
 module io.github.astrapisixtynine.auth.api
 {
+	exports io.github.astrapi69.auth.api;
+	exports io.github.astrapi69.auth.api.enumeration;
+	exports io.github.astrapi69.auth.api.sign.in;
+	exports io.github.astrapi69.auth.api.sign.up;
+	exports io.github.astrapi69.auth.api.usermanagement;
 }

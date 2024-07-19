@@ -18,14 +18,50 @@
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.auth.sign.up;
+package io.github.astrapi69.auth.api.sign.in;
 
-import io.github.astrapi69.auth.sign.in.UsernameSignInModel;
+import java.io.Serializable;
 
 /**
- * The interface {@link UsernameSignUpModel} extended with the user name.
+ * The interface {@link SignInModel} for sign in.
  */
-public interface UsernameSignUpModel extends SimpleSignUpModel, UsernameSignInModel
+public interface SignInModel extends Serializable
 {
+
+	/** The Constant EMAIL. */
+	static final String EMAIL = "email";
+
+	/** The Constant PASSWORD. */
+	static final String PASSWORD = "password";
+
+	/**
+	 * Gets the email.
+	 *
+	 * @return the email
+	 */
+	String getEmail();
+
+	/**
+	 * Sets the email.
+	 *
+	 * @param email
+	 *            the new email
+	 */
+	void setEmail(final String email);
+
+	/**
+	 * Gets the password.
+	 *
+	 * @return the password
+	 */
+	String getPassword();
+
+	/**
+	 * Sets the password.
+	 *
+	 * @param password
+	 *            the new password
+	 */
+	void setPassword(final String password);
 
 }

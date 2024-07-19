@@ -18,22 +18,14 @@
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.auth.enumtype;
+package io.github.astrapi69.auth.api.sign.up;
+
+import io.github.astrapi69.auth.api.sign.in.UsernameSignInModel;
 
 /**
- * The Enum {@link AuthenticationErrors}.
+ * The interface {@link UsernameSignUpModel} extended with the user name.
  */
-public enum AuthenticationErrors
+public interface UsernameSignUpModel extends SimpleSignUpModel, UsernameSignInModel
 {
 
-	/**
-	 * This constant indicates that the given email or username does not exist.
-	 */
-	EMAIL_OR_USERNAME_DOES_NOT_EXIST,
-
-	/** This constant indicates that the given password is invalid. */
-	PASSWORD_INVALID,
-
-	/** This constant indicates that the given user object is not registered. */
-	UNREGISTERED
-};
+}

@@ -18,50 +18,18 @@
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-package io.github.astrapi69.auth.sign.in;
-
-import java.io.Serializable;
+package io.github.astrapi69.auth.api.enumeration;
 
 /**
- * The interface {@link SignInModel} for sign in.
+ * The enum {@link InsertUserState} keeps three states for checking if the user exist or not.
  */
-public interface SignInModel extends Serializable
+public enum InsertUserState
 {
 
-	/** The Constant EMAIL. */
-	static final String EMAIL = "email";
-
-	/** The Constant PASSWORD. */
-	static final String PASSWORD = "password";
-
-	/**
-	 * Gets the email.
-	 *
-	 * @return the email
-	 */
-	String getEmail();
-
-	/**
-	 * Sets the email.
-	 *
-	 * @param email
-	 *            the new email
-	 */
-	void setEmail(final String email);
-
-	/**
-	 * Gets the password.
-	 *
-	 * @return the password
-	 */
-	String getPassword();
-
-	/**
-	 * Sets the password.
-	 *
-	 * @param password
-	 *            the new password
-	 */
-	void setPassword(final String password);
-
+	/** The flag that indicates that the email exists. */
+	EMAIL_EXISTS,
+	/** The insert flag indicates that the user can be inserted into the database. */
+	INSERT,
+	/** The flag that indicates that the username exists. */
+	USERNAME_EXISTS;
 }
