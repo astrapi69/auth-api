@@ -4,6 +4,11 @@
 Version 7-SNAPSHOT
 -------------
 
+
+ADDED:
+
+- new module-info.java file for modularization
+
 CHANGED:
 
 - upgrade jdk to version 11
