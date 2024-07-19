@@ -8,12 +8,14 @@ Version 7-SNAPSHOT
 ADDED:
 
 - new module-info.java file for modularization
+- all packages to export
 
 CHANGED:
 
 - upgrade jdk to version 11
 - update gradle to new version 8.9
 - replaced obsolete package.html with package-info.java files
+- moved all packages to the appropriate main package io.github.astrapi69.auth.api
 
 Version 6
 -------------
